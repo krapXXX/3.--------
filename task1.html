@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function addStyles(styles,text)
+        {
+        let stylesArr = styles.map(style => `${style[0]}:${style[1]}`).join("; ");
+        document.write(`<p style="${stylesArr}">${text}</p>`);
+        } 
+        let styles = [
+            ["color","purple"],
+            ["font-size","24px"],
+            ["font-weight","bold"],
+            ["text-decoration","underline"],
+            ["text-transform","uppercase"]
+        ]
+        let styles1 = [
+            ["color","red"],
+            ["font-size","35px"],
+            ["font-weight","bold"],
+            ["text-decoration","overline"],
+            ["text-transform","uppercase"]
+        ]
+
+            addStyles(styles, "Hello");
+            addStyles(styles1, "Hello");
+    </script>
+</body>
+</html>
